@@ -59,7 +59,7 @@ jobs:
         uses: cloudnode-pro/modrinth-publish@v2
         with:
           token: ${{ secrets.MODRINTH_TOKEN }}
-          project: 3G6CuzmD
+          project: UUje8MEt
           name: Instant Fish ${{ steps.rel.outputs.version }}
           version: ${{ steps.rel.outputs.version }}
           loaders: fabric
