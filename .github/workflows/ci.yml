@@ -29,8 +29,8 @@ jobs:
           {
             echo "gradle_arg=-Pversion=$version"
             echo "version=$version"
-            echo "jar=instantfish-$version.jar"
-            echo "sources=instantfish-$version-sources.jar"
+            echo "jar=white-outline-$version.jar"
+            echo "sources=white-outline-$version-sources.jar"
             # grep'd so Modrinth's game version can't drift from the jar's
             echo "mcv=$(grep '^minecraft_version=' gradle.properties | cut -d= -f2)"
           } >> "$GITHUB_OUTPUT"
@@ -60,10 +60,10 @@ jobs:
         with:
           token: ${{ secrets.MODRINTH_TOKEN }}
           project: UUje8MEt
-          name: Instant Fish ${{ steps.rel.outputs.version }}
+          name: White Block Outline ${{ steps.rel.outputs.version }}
           version: ${{ steps.rel.outputs.version }}
           loaders: fabric
           game-versions: ${{ steps.rel.outputs.mcv }}
-          environment: server_only
+          environment: client_only
           files: '["build/libs/${{ steps.rel.outputs.jar }}", "build/libs/${{ steps.rel.outputs.sources }}"]'
           file-types: '{"${{ steps.rel.outputs.sources }}": "sources-jar"}'
