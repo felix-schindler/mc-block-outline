@@ -1,0 +1,23 @@
+{
+	"schemaVersion": 1,
+	"id": "white-outline",
+	"version": "${version}",
+	"name": "White Block Outline",
+	"description": "Makes the block selection outline white.",
+	"authors": [
+		"Me!"
+	],
+	"license": "CC0-1.0",
+	"environment": "client",
+	"mixins": [
+		{
+			"config": "white-outline.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.19.5",
+		"minecraft": "~26.3",
+		"java": ">=25"
+	}
+}
